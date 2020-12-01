@@ -58,7 +58,10 @@
         animation: growth-small 300ms linear;
         animation-fill-mode: forwards;
     }
-
+    
+    .overlayer .button-container button:nth-child(2){
+        margin-left: 4%;
+    }
     @keyframes growth-small {
         from {
             background-color: rgba(0, 0, 0, 0);
@@ -77,6 +80,9 @@
 }
 
 @media (max-width :400px){
+    .overlayer .button-container button:nth-child(2) {
+        margin-left: 0%;
+    }
     .hard-grid-system{
         grid-template-columns: repeat(2,auto) !important;
     }
