@@ -1,0 +1,421 @@
+$mainColor :rgb(255, 109, 0);
+$secondaryColor :rgb(255, 187, 137);
+
+* {
+    box-sizing: border-box;
+}
+
+html {
+
+    cursor: url('../Assets/Cursors/Ghost.cur'), auto;
+}
+
+body {
+    background: radial-gradient(#9D5900, #3D2200);
+}
+
+h1 {
+    font-family: 'Eater', cursive;
+    color: $mainColor;
+    font-weight: 900;
+    text-align: center;
+    font-size: 65px;
+    margin-bottom: 0;
+}
+.game-Type {
+    font-family: 'Eater', cursive;
+    color: $mainColor;
+    display: block;
+    font-weight: 900;
+    text-align: center;
+    font-size: 26px;
+}
+
+.content-container {
+    display: grid;
+    grid-template-columns: repeat(4, auto);
+    grid-gap: 10px;
+    justify-content: center;
+
+    .scoreandtime-container {
+        font-family: 'Frijole', cursive;
+        display: flex;
+        font-size: 26px;
+        grid-column: 1/-1;
+        justify-content: space-between;
+        color: $secondaryColor;
+        align-items: center;
+    }
+
+    .card {
+        width: 125px;
+        height: 175px;
+        position: relative;
+        backface-visibility: hidden;
+        cursor: url("../Assets/Cursors/GhostHover.cur"), auto;
+
+        &.flipped .card-back {
+            transform: rotateY(-180deg);
+        }
+
+        &.flipped .card-face {
+            transform: rotateY(0);
+        }
+
+        .card-back {
+            @extend %main-Card-Style;
+            border-radius: 12px;
+            background-color: #000;
+            border: 2px solid $mainColor;
+
+            & img:nth-child(5) {
+                align-self: flex-start;
+                height: auto;
+                width: auto;
+                transform: translateY(-10px);
+                
+            }
+
+            &:hover .card-web {
+                width: 52px;
+                height: 52px;
+            }
+
+            & .card-web {
+                transition: width 100ms ease-in-out, height 100ms ease-in-out;
+            }
+
+            & .card-spider {
+                transition: transform 100ms ease-in-out;
+            }
+
+            &:hover .card-spider {
+                transform: translateY(0);
+            }
+        }
+
+        .card-face {
+            @extend %main-Card-Style;
+            background-color: $secondaryColor;
+            border-radius: 12px;
+            border-color: rgb(51, 51, 51);
+            transform: rotateY(180deg);
+            & img:nth-last-child(1) {
+                width: auto !important;
+                height: auto !important;
+                &.new-cards{
+                    width: 90px !important;
+                    height: 85px !important;
+                }
+            }
+        }
+    }
+    
+}
+.dance{
+    & .card-back {
+        transform: rotateY(-180deg) !important;
+    }
+
+    & .card-face {
+        transform: rotateY(0) !important;
+    }
+    &  .card-face  img:nth-last-child(1) {
+        animation: character-anime 1s linear infinite;
+    }
+}
+
+@keyframes character-anime {
+    0% {
+        transform: rotate(0);
+    }
+
+    25% {
+        transform: rotate(-30deg);
+    }
+
+    50% {
+        transform: rotate(0);
+    }
+
+    75% {
+        transform: rotate(30deg);
+    }
+
+    100% {
+        transform: rotate(0);
+    }
+}
+
+%main-Card-Style {
+    display: flex;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    border: 2px solid;
+    overflow: hidden;
+    justify-content: center;
+    align-items: center;
+    backface-visibility: hidden;
+    transition: transform 450ms ease-in-out;
+
+    & img {
+        height: 47px;
+        width: 47px;
+    }
+
+    & img:nth-child(1) {
+        position: absolute;
+        top: 0;
+        right: 0;
+    }
+
+    & img:nth-child(2) {
+        position: absolute;
+        top: 0;
+        left: 0;
+        transform: rotate(-90deg);
+    }
+
+    & img:nth-child(3) {
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        transform: rotate(-180deg);
+    }
+
+    & img:nth-child(4) {
+        position: absolute;
+        bottom: 0;
+        right: 0;
+        transform: rotate(90deg);
+    }
+
+    &:hover .card-web {
+        width: 52px;
+        height: 52px;
+    }
+
+    & .card-web {
+        transition: width 100ms ease-in-out, height 100ms ease-in-out;
+    }
+}
+
+.overlayer {
+    position: fixed;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    visibility: hidden;
+    animation: growth 300ms linear;
+    animation-fill-mode: forwards;
+    z-index: 100;
+    color: $mainColor;
+    font-family: 'Eater', cursive;
+    transition: left  600ms linear , right 600ms linear !important;
+
+    span {
+        font-size: .3em;
+        margin-top: 0px;
+    }
+}
+
+.visible {
+    visibility: visible;
+}
+
+@keyframes growth {
+    from {
+        background-color: rgba(0, 0, 0, 0);
+        font-size: 0;
+    }
+
+    to {
+        background-color: rgba(0, 0, 0, .85);
+        font-size: 100px;
+    }
+}
+.overlayer{
+    & .button-container{
+        display: flex;
+        width: 50%;
+        align-items: center;
+        justify-content: space-between;
+        margin-bottom: 20px;
+        & button:nth-child(2){
+            margin-left: 5%;
+        }
+    }
+    & input{
+        width: 12em;
+        height: 2em;
+        text-align: center;
+        background-color: $secondaryColor;
+        border: 2px solid $secondaryColor;
+        border-radius: 12px;
+        color: black;
+        font-size: .4em;
+        margin-bottom: 15px;
+        font-family: inherit;
+        outline: none;
+        cursor: url('../Assets/Cursors/GhostHover.cur') , auto;
+
+    }
+    & button{
+        font-size: .2em;
+        color: inherit;
+        outline: none;
+        font-family: inherit;
+        background-color: inherit;
+        border: 3px solid;
+        cursor: url('../Assets/Cursors/GhostHover.cur') , auto;
+        border-radius: 5px;
+        &.start{
+            font-size: .25em;
+            &:hover{
+                background-color: red;
+                color:$secondaryColor;
+            }
+        }
+    }
+}
+.hard{
+    display: none;
+}
+.impossible{
+    display: none;
+}
+.show{
+    display: block !important;
+}
+.hard-grid-system{
+    grid-template-columns: repeat(6,auto) !important;
+}
+.impossible-grid-system{
+    grid-template-columns: repeat(8,auto) !important;
+}
+.get-score{
+    position: absolute;
+    right: 20px;
+    bottom: 30px;
+    &:hover{
+        background-color: white;
+        color:$secondaryColor;
+    }
+}
+
+
+.swing{
+    top:0 !important;
+    left: -10000px !important;
+    transition: all 500ms linear !important;
+}
+
+#scoringTable{
+    left: 10000px;
+    font-family: 'Frijole';
+    transition: all 800ms linear !important;
+    & .get-back-to-game{
+        @extend .get-score;
+        
+        left : 20px !important;
+        font-size: .4em !important;
+        &:hover{
+            background-color: white;
+            color:$secondaryColor;
+        }
+    }
+    & .delete-all-score{
+        right: 20px !important;
+        left: auto !important;
+        @extend .get-back-to-game;
+    }
+}
+.overlayer-score{
+    left: 0px !important;
+    transition: all 800ms linear !important;
+    font-size: 1.5em !important;
+}
+
+
+#won-game-screen{
+    & .score{
+        
+        font-size:1.3em ;
+    }
+    & .time{
+        
+        font-size:1.3em ;
+    }
+}
+table {
+    text-align: center;
+  }
+  table td, table th {
+    border: 3px solid #FFFFFF;
+    padding: 3px 2px;
+  }
+  table tbody td {
+    font-size: 12px;
+    color: #FF6D00;
+    &:first-of-type{
+        text-align: left;
+    }
+  }
+  table tr:nth-child(even) {
+    background: #D0E4F5;
+  }
+  table thead {
+    background: $secondaryColor;
+    border-bottom: 5px solid #FFFFFF;
+  }
+  table thead th {
+    font-size: 16px;
+    font-weight: bold;
+    color: #FFFFFF;
+    text-align: center;
+    border-left: 2px solid #FFFFFF;
+    
+  }
+  table thead th:first-child {
+    border-left: none;
+}
+  
+table tfoot td {
+    font-size: 13px;
+    
+}
+
+.coloration{
+      background-color:blanchedalmond !important;
+}
+
+.clear-score{
+    font-size: 7px !important;
+    padding: 2px 4px;
+    border: 2px solid;
+    border-radius: 50%;
+    margin-right: 5px;
+    &:hover{
+        background-color: blue;
+    }
+}
+
+.message{
+    display: flex;
+    justify-content: center;
+    & img{
+        width: 50%;
+    }
+}
+.stop-clicking{
+    pointer-events: none;
+}
+.next-level{
+    @extend .start;
+}

@@ -1,0 +1,385 @@
+* {
+  box-sizing: border-box;
+}
+
+html {
+  cursor: url("../Assets/Cursors/Ghost.cur"), auto;
+}
+
+body {
+  background: radial-gradient(#9D5900, #3D2200);
+}
+
+h1 {
+  font-family: "Eater", cursive;
+  color: #ff6d00;
+  font-weight: 900;
+  text-align: center;
+  font-size: 65px;
+  margin-bottom: 0;
+}
+
+.game-Type {
+  font-family: "Eater", cursive;
+  color: #ff6d00;
+  display: block;
+  font-weight: 900;
+  text-align: center;
+  font-size: 26px;
+}
+
+.content-container {
+  display: grid;
+  grid-template-columns: repeat(4, auto);
+  grid-gap: 10px;
+  justify-content: center;
+}
+.content-container .scoreandtime-container {
+  font-family: "Frijole", cursive;
+  display: flex;
+  font-size: 26px;
+  grid-column: 1/-1;
+  justify-content: space-between;
+  color: #ffbb89;
+  align-items: center;
+}
+.content-container .card {
+  width: 125px;
+  height: 175px;
+  position: relative;
+  backface-visibility: hidden;
+  cursor: url("../Assets/Cursors/GhostHover.cur"), auto;
+}
+.content-container .card.flipped .card-back {
+  transform: rotateY(-180deg);
+}
+.content-container .card.flipped .card-face {
+  transform: rotateY(0);
+}
+.content-container .card .card-back {
+  border-radius: 12px;
+  background-color: #000;
+  border: 2px solid #ff6d00;
+}
+.content-container .card .card-back img:nth-child(5) {
+  align-self: flex-start;
+  height: auto;
+  width: auto;
+  transform: translateY(-10px);
+}
+.content-container .card .card-back:hover .card-web {
+  width: 52px;
+  height: 52px;
+}
+.content-container .card .card-back .card-web {
+  transition: width 100ms ease-in-out, height 100ms ease-in-out;
+}
+.content-container .card .card-back .card-spider {
+  transition: transform 100ms ease-in-out;
+}
+.content-container .card .card-back:hover .card-spider {
+  transform: translateY(0);
+}
+.content-container .card .card-face {
+  background-color: #ffbb89;
+  border-radius: 12px;
+  border-color: #333333;
+  transform: rotateY(180deg);
+}
+.content-container .card .card-face img:nth-last-child(1) {
+  width: auto !important;
+  height: auto !important;
+}
+.content-container .card .card-face img:nth-last-child(1).new-cards {
+  width: 90px !important;
+  height: 85px !important;
+}
+
+.dance .card-back {
+  transform: rotateY(-180deg) !important;
+}
+.dance .card-face {
+  transform: rotateY(0) !important;
+}
+.dance .card-face img:nth-last-child(1) {
+  animation: character-anime 1s linear infinite;
+}
+
+@keyframes character-anime {
+  0% {
+    transform: rotate(0);
+  }
+  25% {
+    transform: rotate(-30deg);
+  }
+  50% {
+    transform: rotate(0);
+  }
+  75% {
+    transform: rotate(30deg);
+  }
+  100% {
+    transform: rotate(0);
+  }
+}
+.content-container .card .card-back, .content-container .card .card-face {
+  display: flex;
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  border: 2px solid;
+  overflow: hidden;
+  justify-content: center;
+  align-items: center;
+  backface-visibility: hidden;
+  transition: transform 450ms ease-in-out;
+}
+.content-container .card .card-back img, .content-container .card .card-face img {
+  height: 47px;
+  width: 47px;
+}
+.content-container .card .card-back img:nth-child(1), .content-container .card .card-face img:nth-child(1) {
+  position: absolute;
+  top: 0;
+  right: 0;
+}
+.content-container .card .card-back img:nth-child(2), .content-container .card .card-face img:nth-child(2) {
+  position: absolute;
+  top: 0;
+  left: 0;
+  transform: rotate(-90deg);
+}
+.content-container .card .card-back img:nth-child(3), .content-container .card .card-face img:nth-child(3) {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  transform: rotate(-180deg);
+}
+.content-container .card .card-back img:nth-child(4), .content-container .card .card-face img:nth-child(4) {
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  transform: rotate(90deg);
+}
+.content-container .card .card-back:hover .card-web, .content-container .card .card-face:hover .card-web {
+  width: 52px;
+  height: 52px;
+}
+.content-container .card .card-back .card-web, .content-container .card .card-face .card-web {
+  transition: width 100ms ease-in-out, height 100ms ease-in-out;
+}
+
+.overlayer {
+  position: fixed;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  visibility: hidden;
+  animation: growth 300ms linear;
+  animation-fill-mode: forwards;
+  z-index: 100;
+  color: #ff6d00;
+  font-family: "Eater", cursive;
+  transition: left 600ms linear, right 600ms linear !important;
+}
+.overlayer span {
+  font-size: 0.3em;
+  margin-top: 0px;
+}
+
+.visible {
+  visibility: visible;
+}
+
+@keyframes growth {
+  from {
+    background-color: rgba(0, 0, 0, 0);
+    font-size: 0;
+  }
+  to {
+    background-color: rgba(0, 0, 0, 0.85);
+    font-size: 100px;
+  }
+}
+.overlayer .button-container {
+  display: flex;
+  width: 50%;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 20px;
+}
+.overlayer .button-container button:nth-child(2) {
+  margin-left: 5%;
+}
+.overlayer input {
+  width: 12em;
+  height: 2em;
+  text-align: center;
+  background-color: #ffbb89;
+  border: 2px solid #ffbb89;
+  border-radius: 12px;
+  color: black;
+  font-size: 0.4em;
+  margin-bottom: 15px;
+  font-family: inherit;
+  outline: none;
+  cursor: url("../Assets/Cursors/GhostHover.cur"), auto;
+}
+.overlayer button {
+  font-size: 0.2em;
+  color: inherit;
+  outline: none;
+  font-family: inherit;
+  background-color: inherit;
+  border: 3px solid;
+  cursor: url("../Assets/Cursors/GhostHover.cur"), auto;
+  border-radius: 5px;
+}
+.overlayer button.start, .overlayer button.next-level {
+  font-size: 0.25em;
+}
+.overlayer button.start:hover, .overlayer button.next-level:hover {
+  background-color: red;
+  color: #ffbb89;
+}
+
+.hard {
+  display: none;
+}
+
+.impossible {
+  display: none;
+}
+
+.show {
+  display: block !important;
+}
+
+.hard-grid-system {
+  grid-template-columns: repeat(6, auto) !important;
+}
+
+.impossible-grid-system {
+  grid-template-columns: repeat(8, auto) !important;
+}
+
+.get-score, #scoringTable .get-back-to-game, #scoringTable .delete-all-score {
+  position: absolute;
+  right: 20px;
+  bottom: 30px;
+}
+.get-score:hover, #scoringTable .get-back-to-game:hover, #scoringTable .delete-all-score:hover {
+  background-color: white;
+  color: #ffbb89;
+}
+
+.swing {
+  top: 0 !important;
+  left: -10000px !important;
+  transition: all 500ms linear !important;
+}
+
+#scoringTable {
+  left: 10000px;
+  font-family: "Frijole";
+  transition: all 800ms linear !important;
+}
+#scoringTable .get-back-to-game, #scoringTable .delete-all-score {
+  left: 20px !important;
+  font-size: 0.4em !important;
+}
+#scoringTable .get-back-to-game:hover, #scoringTable .delete-all-score:hover {
+  background-color: white;
+  color: #ffbb89;
+}
+#scoringTable .delete-all-score {
+  right: 20px !important;
+  left: auto !important;
+}
+
+.overlayer-score {
+  left: 0px !important;
+  transition: all 800ms linear !important;
+  font-size: 1.5em !important;
+}
+
+#won-game-screen .score {
+  font-size: 1.3em;
+}
+#won-game-screen .time {
+  font-size: 1.3em;
+}
+
+table {
+  text-align: center;
+}
+
+table td, table th {
+  border: 3px solid #FFFFFF;
+  padding: 3px 2px;
+}
+
+table tbody td {
+  font-size: 12px;
+  color: #FF6D00;
+}
+table tbody td:first-of-type {
+  text-align: left;
+}
+
+table tr:nth-child(even) {
+  background: #D0E4F5;
+}
+
+table thead {
+  background: #ffbb89;
+  border-bottom: 5px solid #FFFFFF;
+}
+
+table thead th {
+  font-size: 16px;
+  font-weight: bold;
+  color: #FFFFFF;
+  text-align: center;
+  border-left: 2px solid #FFFFFF;
+}
+
+table thead th:first-child {
+  border-left: none;
+}
+
+table tfoot td {
+  font-size: 13px;
+}
+
+.coloration {
+  background-color: blanchedalmond !important;
+}
+
+.clear-score {
+  font-size: 7px !important;
+  padding: 2px 4px;
+  border: 2px solid;
+  border-radius: 50%;
+  margin-right: 5px;
+}
+.clear-score:hover {
+  background-color: blue;
+}
+
+.message {
+  display: flex;
+  justify-content: center;
+}
+.message img {
+  width: 50%;
+}
+
+.stop-clicking {
+  pointer-events: none;
+}

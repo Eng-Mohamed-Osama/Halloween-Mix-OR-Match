@@ -1,0 +1,584 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="./Assets/Images/vampire.png" type="image/icon type">
+    <title>Memory Game</title>
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Syne+Tactile&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Frijole&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Creepster&display=swap" rel="stylesheet"> 
+    <link href="https://fonts.googleapis.com/css2?family=Eater&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="./dist/style.css">
+    <link rel="stylesheet" href="media.css">
+</head>
+<body>
+    <header>
+        <h1>
+            Mix-OR-Match
+        </h1>
+        <span class="game-Type">Normal</span>
+    </header>
+    <main>
+        <div class="content-container">
+            <div class="scoreandtime-container">
+                <p>Timer <span class="timer">100</span></p>
+                <p>Flips <span class="flips">0</span></p>
+            </div>
+            <div class="card normal normal-hard" data-name ='bat'>
+                <div class="card-face Bat">
+                    <img class="card-web" src="Assets/Images/CobwebGrey.png" alt="">
+                    <img class="card-web" src="Assets/Images/CobwebGrey.png" alt="">
+                    <img class="card-web" src="Assets/Images/CobwebGrey.png" alt="">
+                    <img class="card-web" src="Assets/Images/CobwebGrey.png" alt="">
+                    <img class="card-figure" src="Assets/Images/Bat.png" alt="">
+                </div>
+                <div class="card-back">
+                    <img class="card-web" src="Assets/Images/Cobweb.png" alt="">
+                    <img class="card-web" src="Assets/Images/Cobweb.png" alt="">
+                    <img class="card-web" src="Assets/Images/Cobweb.png" alt="">
+                    <img class="card-web" src="Assets/Images/Cobweb.png" alt="">
+                    <img class="card-spider" src="Assets/Images/Spider.png" alt="">
+                </div>
+            </div>
+            <div class="card normal normal-hard" data-name ='bat'>
+                <div class="card-face Bat">
+                    <img class="card-web" src="Assets/Images/CobwebGrey.png" alt="">
+                    <img class="card-web" src="Assets/Images/CobwebGrey.png" alt="">
+                    <img class="card-web" src="Assets/Images/CobwebGrey.png" alt="">
+                    <img class="card-web" src="Assets/Images/CobwebGrey.png" alt="">
+                    <img class="card-figure" src="Assets/Images/Bat.png" alt="">
+                </div>
+                <div class="card-back">
+                    <img class="card-web" src="Assets/Images/Cobweb.png" alt="">
+                    <img class="card-web" src="Assets/Images/Cobweb.png" alt="">
+                    <img class="card-web" src="Assets/Images/Cobweb.png" alt="">
+                    <img class="card-web" src="Assets/Images/Cobweb.png" alt="">
+                    <img class="card-spider" src="Assets/Images/Spider.png" alt="">
+                </div>
+            </div>
+            <div class="card normal normal-hard" data-name ='Bones'>
+                <div class="card-face">
+                    <img class="card-web" src="Assets/Images/CobwebGrey.png" alt="">
+                    <img class="card-web" src="Assets/Images/CobwebGrey.png" alt="">
+                    <img class="card-web" src="Assets/Images/CobwebGrey.png" alt="">
+                    <img class="card-web" src="Assets/Images/CobwebGrey.png" alt="">
+                    <img class="card-figure" src="Assets/Images/Bones.png" alt="">
+                </div>
+                <div class="card-back">
+                    <img class="card-web" src="Assets/Images/Cobweb.png" alt="">
+                    <img class="card-web" src="Assets/Images/Cobweb.png" alt="">
+                    <img class="card-web" src="Assets/Images/Cobweb.png" alt="">
+                    <img class="card-web" src="Assets/Images/Cobweb.png" alt="">
+                    <img class="card-spider" src="Assets/Images/Spider.png" alt="">
+                </div>
+            </div>
+            <div class="card normal normal-hard" data-name ='Bones'>
+                <div class="card-face">
+                    <img class="card-web" src="Assets/Images/CobwebGrey.png" alt="">
+                    <img class="card-web" src="Assets/Images/CobwebGrey.png" alt="">
+                    <img class="card-web" src="Assets/Images/CobwebGrey.png" alt="">
+                    <img class="card-web" src="Assets/Images/CobwebGrey.png" alt="">
+                    <img class="card-figure" src="Assets/Images/Bones.png" alt="">
+                </div>
+                <div class="card-back">
+                    <img class="card-web" src="Assets/Images/Cobweb.png" alt="">
+                    <img class="card-web" src="Assets/Images/Cobweb.png" alt="">
+                    <img class="card-web" src="Assets/Images/Cobweb.png" alt="">
+                    <img class="card-web" src="Assets/Images/Cobweb.png" alt="">
+                    <img class="card-spider" src="Assets/Images/Spider.png" alt="">
+                </div>
+            </div>
+            <div class="card normal normal-hard"  data-name ='Cauldron'>
+                <div class="card-face">
+                    <img class="card-web" src="Assets/Images/CobwebGrey.png" alt="">
+                    <img class="card-web" src="Assets/Images/CobwebGrey.png" alt="">
+                    <img class="card-web" src="Assets/Images/CobwebGrey.png" alt="">
+                    <img class="card-web" src="Assets/Images/CobwebGrey.png" alt="">
+                    <img class="card-figure" src="Assets/Images/Cauldron.png" alt="">
+                </div>
+                <div class="card-back">
+                    <img class="card-web" src="Assets/Images/Cobweb.png" alt="">
+                    <img class="card-web" src="Assets/Images/Cobweb.png" alt="">
+                    <img class="card-web" src="Assets/Images/Cobweb.png" alt="">
+                    <img class="card-web" src="Assets/Images/Cobweb.png" alt="">
+                    <img class="card-spider" src="Assets/Images/Spider.png" alt="">
+                </div>
+            </div>
+            <div class="card normal normal-hard" data-name ='Cauldron'>
+                <div class="card-face">
+                    <img class="card-web" src="Assets/Images/CobwebGrey.png" alt="">
+                    <img class="card-web" src="Assets/Images/CobwebGrey.png" alt="">
+                    <img class="card-web" src="Assets/Images/CobwebGrey.png" alt="">
+                    <img class="card-web" src="Assets/Images/CobwebGrey.png" alt="">
+                    <img class="card-figure" src="Assets/Images/Cauldron.png" alt="">
+                </div>
+                <div class="card-back">
+                    <img class="card-web" src="Assets/Images/Cobweb.png" alt="">
+                    <img class="card-web" src="Assets/Images/Cobweb.png" alt="">
+                    <img class="card-web" src="Assets/Images/Cobweb.png" alt="">
+                    <img class="card-web" src="Assets/Images/Cobweb.png" alt="">
+                    <img class="card-spider" src="Assets/Images/Spider.png" alt="">
+                </div>
+            </div>
+            <div class="card normal normal-hard" data-name ='Dracula'>
+                <div class="card-face">
+                    <img class="card-web" src="Assets/Images/CobwebGrey.png" alt="">
+                    <img class="card-web" src="Assets/Images/CobwebGrey.png" alt="">
+                    <img class="card-web" src="Assets/Images/CobwebGrey.png" alt="">
+                    <img class="card-web" src="Assets/Images/CobwebGrey.png" alt="">
+                    <img class="card-figure" src="Assets/Images/Dracula.png" alt="">
+                </div>
+                <div class="card-back">
+                    <img class="card-web" src="Assets/Images/Cobweb.png" alt="">
+                    <img class="card-web" src="Assets/Images/Cobweb.png" alt="">
+                    <img class="card-web" src="Assets/Images/Cobweb.png" alt="">
+                    <img class="card-web" src="Assets/Images/Cobweb.png" alt="">
+                    <img class="card-spider" src="Assets/Images/Spider.png" alt="">
+                </div>
+            </div>
+            <div class="card normal normal-hard" data-name ='Dracula'>
+                <div class="card-face">
+                    <img class="card-web" src="Assets/Images/CobwebGrey.png" alt="">
+                    <img class="card-web" src="Assets/Images/CobwebGrey.png" alt="">
+                    <img class="card-web" src="Assets/Images/CobwebGrey.png" alt="">
+                    <img class="card-web" src="Assets/Images/CobwebGrey.png" alt="">
+                    <img class="card-figure" src="Assets/Images/Dracula.png" alt="">
+                </div>
+                <div class="card-back">
+                    <img class="card-web" src="Assets/Images/Cobweb.png" alt="">
+                    <img class="card-web" src="Assets/Images/Cobweb.png" alt="">
+                    <img class="card-web" src="Assets/Images/Cobweb.png" alt="">
+                    <img class="card-web" src="Assets/Images/Cobweb.png" alt="">
+                    <img class="card-spider" src="Assets/Images/Spider.png" alt="">
+                </div>
+            </div>
+            <div class="card normal normal-hard" data-name ='Eye'>
+                <div class="card-face">
+                    <img class="card-web" src="Assets/Images/CobwebGrey.png" alt="">
+                    <img class="card-web" src="Assets/Images/CobwebGrey.png" alt="">
+                    <img class="card-web" src="Assets/Images/CobwebGrey.png" alt="">
+                    <img class="card-web" src="Assets/Images/CobwebGrey.png" alt="">
+                    <img class="card-figure" src="Assets/Images/Eye.png" alt="">
+                </div>
+                <div class="card-back">
+                    <img class="card-web" src="Assets/Images/Cobweb.png" alt="">
+                    <img class="card-web" src="Assets/Images/Cobweb.png" alt="">
+                    <img class="card-web" src="Assets/Images/Cobweb.png" alt="">
+                    <img class="card-web" src="Assets/Images/Cobweb.png" alt="">
+                    <img class="card-spider" src="Assets/Images/Spider.png" alt="">
+                </div>
+            </div>
+            <div class="card normal normal-hard" data-name ='Eye'>
+                <div class="card-face">
+                    <img class="card-web" src="Assets/Images/CobwebGrey.png" alt="">
+                    <img class="card-web" src="Assets/Images/CobwebGrey.png" alt="">
+                    <img class="card-web" src="Assets/Images/CobwebGrey.png" alt="">
+                    <img class="card-web" src="Assets/Images/CobwebGrey.png" alt="">
+                    <img class="card-figure" src="Assets/Images/Eye.png" alt="">
+                </div>
+                <div class="card-back">
+                    <img class="card-web" src="Assets/Images/Cobweb.png" alt="">
+                    <img class="card-web" src="Assets/Images/Cobweb.png" alt="">
+                    <img class="card-web" src="Assets/Images/Cobweb.png" alt="">
+                    <img class="card-web" src="Assets/Images/Cobweb.png" alt="">
+                    <img class="card-spider" src="Assets/Images/Spider.png" alt="">
+                </div>
+            </div>
+            <div class="card normal normal-hard" data-name ='Ghost'>
+                <div class="card-face">
+                    <img class="card-web" src="Assets/Images/CobwebGrey.png" alt="">
+                    <img class="card-web" src="Assets/Images/CobwebGrey.png" alt="">
+                    <img class="card-web" src="Assets/Images/CobwebGrey.png" alt="">
+                    <img class="card-web" src="Assets/Images/CobwebGrey.png" alt="">
+                    <img class="card-figure" src="Assets/Images/Ghost.png" alt="">
+                </div>
+                <div class="card-back">
+                    <img class="card-web" src="Assets/Images/Cobweb.png" alt="">
+                    <img class="card-web" src="Assets/Images/Cobweb.png" alt="">
+                    <img class="card-web" src="Assets/Images/Cobweb.png" alt="">
+                    <img class="card-web" src="Assets/Images/Cobweb.png" alt="">
+                    <img class="card-spider" src="Assets/Images/Spider.png" alt="">
+                </div>
+            </div>
+            <div class="card normal normal-hard" data-name ='Ghost'>
+                <div class="card-face">
+                    <img class="card-web" src="Assets/Images/CobwebGrey.png" alt="">
+                    <img class="card-web" src="Assets/Images/CobwebGrey.png" alt="">
+                    <img class="card-web" src="Assets/Images/CobwebGrey.png" alt="">
+                    <img class="card-web" src="Assets/Images/CobwebGrey.png" alt="">
+                    <img class="card-figure" src="Assets/Images/Ghost.png" alt="">
+                </div>
+                <div class="card-back">
+                    <img class="card-web" src="Assets/Images/Cobweb.png" alt="">
+                    <img class="card-web" src="Assets/Images/Cobweb.png" alt="">
+                    <img class="card-web" src="Assets/Images/Cobweb.png" alt="">
+                    <img class="card-web" src="Assets/Images/Cobweb.png" alt="">
+                    <img class="card-spider" src="Assets/Images/Spider.png" alt="">
+                </div>
+            </div>
+            <div class="card normal normal-hard" data-name ='Skull'>
+                <div class="card-face">
+                    <img class="card-web" src="Assets/Images/CobwebGrey.png" alt="">
+                    <img class="card-web" src="Assets/Images/CobwebGrey.png" alt="">
+                    <img class="card-web" src="Assets/Images/CobwebGrey.png" alt="">
+                    <img class="card-web" src="Assets/Images/CobwebGrey.png" alt="">
+                    <img class="card-figure" src="Assets/Images/Skull.png" alt="">
+                </div>
+                <div class="card-back">
+                    <img class="card-web" src="Assets/Images/Cobweb.png" alt="">
+                    <img class="card-web" src="Assets/Images/Cobweb.png" alt="">
+                    <img class="card-web" src="Assets/Images/Cobweb.png" alt="">
+                    <img class="card-web" src="Assets/Images/Cobweb.png" alt="">
+                    <img class="card-spider" src="Assets/Images/Spider.png" alt="">
+                </div>
+            </div>
+            <div class="card normal normal-hard" data-name ='Skull'>
+                <div class="card-face">
+                    <img class="card-web" src="Assets/Images/CobwebGrey.png" alt="">
+                    <img class="card-web" src="Assets/Images/CobwebGrey.png" alt="">
+                    <img class="card-web" src="Assets/Images/CobwebGrey.png" alt="">
+                    <img class="card-web" src="Assets/Images/CobwebGrey.png" alt="">
+                    <img class="card-figure" src="Assets/Images/Skull.png" alt="">
+                </div>
+                <div class="card-back">
+                    <img class="card-web" src="Assets/Images/Cobweb.png" alt="">
+                    <img class="card-web" src="Assets/Images/Cobweb.png" alt="">
+                    <img class="card-web" src="Assets/Images/Cobweb.png" alt="">
+                    <img class="card-web" src="Assets/Images/Cobweb.png" alt="">
+                    <img class="card-spider" src="Assets/Images/Spider.png" alt="">
+                </div>
+            </div>
+            <div class="card normal normal-hard" data-name ='Pumpkin'>
+                <div class="card-face">
+                    <img class="card-web" src="Assets/Images/CobwebGrey.png" alt="">
+                    <img class="card-web" src="Assets/Images/CobwebGrey.png" alt="">
+                    <img class="card-web" src="Assets/Images/CobwebGrey.png" alt="">
+                    <img class="card-web" src="Assets/Images/CobwebGrey.png" alt="">
+                    <img class="card-figure" src="Assets/Images/Pumpkin.png" alt="">
+                </div>
+                <div class="card-back" >
+                    <img class="card-web" src="Assets/Images/Cobweb.png" alt="">
+                    <img class="card-web" src="Assets/Images/Cobweb.png" alt="">
+                    <img class="card-web" src="Assets/Images/Cobweb.png" alt="">
+                    <img class="card-web" src="Assets/Images/Cobweb.png" alt="">
+                    <img class="card-spider" src="Assets/Images/Spider.png" alt="">
+                </div>
+            </div>
+            <div class="card normal normal-hard" data-name ='Pumpkin'>
+                <div class="card-face" >
+                    <img class="card-web" src="Assets/Images/CobwebGrey.png" alt="">
+                    <img class="card-web" src="Assets/Images/CobwebGrey.png" alt="">
+                    <img class="card-web" src="Assets/Images/CobwebGrey.png" alt="">
+                    <img class="card-web" src="Assets/Images/CobwebGrey.png" alt="">
+                    <img class="card-figure" src="Assets/Images/Pumpkin.png" alt="">
+                </div>
+                <div class="card-back">
+                    <img class="card-web" src="Assets/Images/Cobweb.png" alt="">
+                    <img class="card-web" src="Assets/Images/Cobweb.png" alt="">
+                    <img class="card-web" src="Assets/Images/Cobweb.png" alt="">
+                    <img class="card-web" src="Assets/Images/Cobweb.png" alt="">
+                    <img class="card-spider" src="Assets/Images/Spider.png" alt="">
+                </div>
+            </div>
+            <div class="card hard normal-hard" data-name ='vampire'>
+                <div class="card-face">
+                    <img class="card-web" src="Assets/Images/CobwebGrey.png" alt="">
+                    <img class="card-web" src="Assets/Images/CobwebGrey.png" alt="">
+                    <img class="card-web" src="Assets/Images/CobwebGrey.png" alt="">
+                    <img class="card-web" src="Assets/Images/CobwebGrey.png" alt="">
+                    <img class="card-figure new-cards" src="Assets/Images/vampire.png" alt="">
+                </div>
+                <div class="card-back" >
+                    <img class="card-web" src="Assets/Images/Cobweb.png" alt="">
+                    <img class="card-web" src="Assets/Images/Cobweb.png" alt="">
+                    <img class="card-web" src="Assets/Images/Cobweb.png" alt="">
+                    <img class="card-web" src="Assets/Images/Cobweb.png" alt="">
+                    <img class="card-spider" src="Assets/Images/Spider.png" alt="">
+                </div>
+            </div>
+            <div class="card hard normal-hard" data-name ='vampire'>
+                <div class="card-face" >
+                    <img class="card-web" src="Assets/Images/CobwebGrey.png" alt="">
+                    <img class="card-web" src="Assets/Images/CobwebGrey.png" alt="">
+                    <img class="card-web" src="Assets/Images/CobwebGrey.png" alt="">
+                    <img class="card-web" src="Assets/Images/CobwebGrey.png" alt="">
+                    <img class="card-figure new-cards" src="Assets/Images/vampire.png" alt="">
+                </div>
+                <div class="card-back">
+                    <img class="card-web" src="Assets/Images/Cobweb.png" alt="">
+                    <img class="card-web" src="Assets/Images/Cobweb.png" alt="">
+                    <img class="card-web" src="Assets/Images/Cobweb.png" alt="">
+                    <img class="card-web" src="Assets/Images/Cobweb.png" alt="">
+                    <img class="card-spider" src="Assets/Images/Spider.png" alt="">
+                </div>
+            </div>
+            <div class="card hard normal-hard" data-name ='Bat-2'>
+                <div class="card-face" >
+                    <img class="card-web" src="Assets/Images/CobwebGrey.png" alt="">
+                    <img class="card-web" src="Assets/Images/CobwebGrey.png" alt="">
+                    <img class="card-web" src="Assets/Images/CobwebGrey.png" alt="">
+                    <img class="card-web" src="Assets/Images/CobwebGrey.png" alt="">
+                    <img class="card-figure new-cards" src="Assets/Images/Bat-2.png" alt="">
+                </div>
+                <div class="card-back">
+                    <img class="card-web" src="Assets/Images/Cobweb.png" alt="">
+                    <img class="card-web" src="Assets/Images/Cobweb.png" alt="">
+                    <img class="card-web" src="Assets/Images/Cobweb.png" alt="">
+                    <img class="card-web" src="Assets/Images/Cobweb.png" alt="">
+                    <img class="card-spider" src="Assets/Images/Spider.png" alt="">
+                </div>
+            </div>
+            <div class="card hard normal-hard" data-name ='Bat-2'>
+                <div class="card-face" >
+                    <img class="card-web" src="Assets/Images/CobwebGrey.png" alt="">
+                    <img class="card-web" src="Assets/Images/CobwebGrey.png" alt="">
+                    <img class="card-web" src="Assets/Images/CobwebGrey.png" alt="">
+                    <img class="card-web" src="Assets/Images/CobwebGrey.png" alt="">
+                    <img class="card-figure new-cards" src="Assets/Images/Bat-2.png" alt="">
+                </div>
+                <div class="card-back">
+                    <img class="card-web" src="Assets/Images/Cobweb.png" alt="">
+                    <img class="card-web" src="Assets/Images/Cobweb.png" alt="">
+                    <img class="card-web" src="Assets/Images/Cobweb.png" alt="">
+                    <img class="card-web" src="Assets/Images/Cobweb.png" alt="">
+                    <img class="card-spider" src="Assets/Images/Spider.png" alt="">
+                </div>
+            </div>
+            <div class="card hard normal-hard" data-name ='eyebleed'>
+                <div class="card-face" >
+                    <img class="card-web" src="Assets/Images/CobwebGrey.png" alt="">
+                    <img class="card-web" src="Assets/Images/CobwebGrey.png" alt="">
+                    <img class="card-web" src="Assets/Images/CobwebGrey.png" alt="">
+                    <img class="card-web" src="Assets/Images/CobwebGrey.png" alt="">
+                    <img class="card-figure new-cards" src="Assets/Images/eyebleed.png" alt="">
+                </div>
+                <div class="card-back">
+                    <img class="card-web" src="Assets/Images/Cobweb.png" alt="">
+                    <img class="card-web" src="Assets/Images/Cobweb.png" alt="">
+                    <img class="card-web" src="Assets/Images/Cobweb.png" alt="">
+                    <img class="card-web" src="Assets/Images/Cobweb.png" alt="">
+                    <img class="card-spider" src="Assets/Images/Spider.png" alt="">
+                </div>
+            </div>
+            <div class="card hard normal-hard" data-name ='eyebleed'>
+                <div class="card-face" >
+                    <img class="card-web" src="Assets/Images/CobwebGrey.png" alt="">
+                    <img class="card-web" src="Assets/Images/CobwebGrey.png" alt="">
+                    <img class="card-web" src="Assets/Images/CobwebGrey.png" alt="">
+                    <img class="card-web" src="Assets/Images/CobwebGrey.png" alt="">
+                    <img class="card-figure new-cards" src="Assets/Images/eyebleed.png" alt="">
+                </div>
+                <div class="card-back">
+                    <img class="card-web" src="Assets/Images/Cobweb.png" alt="">
+                    <img class="card-web" src="Assets/Images/Cobweb.png" alt="">
+                    <img class="card-web" src="Assets/Images/Cobweb.png" alt="">
+                    <img class="card-web" src="Assets/Images/Cobweb.png" alt="">
+                    <img class="card-spider" src="Assets/Images/Spider.png" alt="">
+                </div>
+            </div>
+            <div class="card hard normal-hard" data-name ='crystal'>
+                <div class="card-face" >
+                    <img class="card-web" src="Assets/Images/CobwebGrey.png" alt="">
+                    <img class="card-web" src="Assets/Images/CobwebGrey.png" alt="">
+                    <img class="card-web" src="Assets/Images/CobwebGrey.png" alt="">
+                    <img class="card-web" src="Assets/Images/CobwebGrey.png" alt="">
+                    <img class="card-figure new-cards" src="Assets/Images/crystal.jpg" alt="">
+                </div>
+                <div class="card-back">
+                    <img class="card-web" src="Assets/Images/Cobweb.png" alt="">
+                    <img class="card-web" src="Assets/Images/Cobweb.png" alt="">
+                    <img class="card-web" src="Assets/Images/Cobweb.png" alt="">
+                    <img class="card-web" src="Assets/Images/Cobweb.png" alt="">
+                    <img class="card-spider" src="Assets/Images/Spider.png" alt="">
+                </div>
+            </div>
+            <div class="card hard normal-hard" data-name ='crystal'>
+                <div class="card-face" >
+                    <img class="card-web" src="Assets/Images/CobwebGrey.png" alt="">
+                    <img class="card-web" src="Assets/Images/CobwebGrey.png" alt="">
+                    <img class="card-web" src="Assets/Images/CobwebGrey.png" alt="">
+                    <img class="card-web" src="Assets/Images/CobwebGrey.png" alt="">
+                    <img class="card-figure new-cards" src="Assets/Images/crystal.jpg" alt="">
+                </div>
+                <div class="card-back">
+                    <img class="card-web" src="Assets/Images/Cobweb.png" alt="">
+                    <img class="card-web" src="Assets/Images/Cobweb.png" alt="">
+                    <img class="card-web" src="Assets/Images/Cobweb.png" alt="">
+                    <img class="card-web" src="Assets/Images/Cobweb.png" alt="">
+                    <img class="card-spider" src="Assets/Images/Spider.png" alt="">
+                </div>
+            </div>
+            <div class="card impossible" data-name ='owl'>
+                <div class="card-face" >
+                    <img class="card-web" src="Assets/Images/CobwebGrey.png" alt="">
+                    <img class="card-web" src="Assets/Images/CobwebGrey.png" alt="">
+                    <img class="card-web" src="Assets/Images/CobwebGrey.png" alt="">
+                    <img class="card-web" src="Assets/Images/CobwebGrey.png" alt="">
+                    <img class="card-figure new-cards" src="Assets/Images/owl.png" alt="">
+                </div>
+                <div class="card-back">
+                    <img class="card-web" src="Assets/Images/Cobweb.png" alt="">
+                    <img class="card-web" src="Assets/Images/Cobweb.png" alt="">
+                    <img class="card-web" src="Assets/Images/Cobweb.png" alt="">
+                    <img class="card-web" src="Assets/Images/Cobweb.png" alt="">
+                    <img class="card-spider" src="Assets/Images/Spider.png" alt="">
+                </div>
+            </div>
+            <div class="card impossible" data-name ='owl'>
+                <div class="card-face" >
+                    <img class="card-web" src="Assets/Images/CobwebGrey.png" alt="">
+                    <img class="card-web" src="Assets/Images/CobwebGrey.png" alt="">
+                    <img class="card-web" src="Assets/Images/CobwebGrey.png" alt="">
+                    <img class="card-web" src="Assets/Images/CobwebGrey.png" alt="">
+                    <img class="card-figure new-cards" src="Assets/Images/owl.png" alt="">
+                </div>
+                <div class="card-back">
+                    <img class="card-web" src="Assets/Images/Cobweb.png" alt="">
+                    <img class="card-web" src="Assets/Images/Cobweb.png" alt="">
+                    <img class="card-web" src="Assets/Images/Cobweb.png" alt="">
+                    <img class="card-web" src="Assets/Images/Cobweb.png" alt="">
+                    <img class="card-spider" src="Assets/Images/Spider.png" alt="">
+                </div>
+            </div>
+            <div class="card impossible" data-name ='gift'>
+                <div class="card-face" >
+                    <img class="card-web" src="Assets/Images/CobwebGrey.png" alt="">
+                    <img class="card-web" src="Assets/Images/CobwebGrey.png" alt="">
+                    <img class="card-web" src="Assets/Images/CobwebGrey.png" alt="">
+                    <img class="card-web" src="Assets/Images/CobwebGrey.png" alt="">
+                    <img class="card-figure new-cards" src="Assets/Images/gift.png" alt="">
+                </div>
+                <div class="card-back">
+                    <img class="card-web" src="Assets/Images/Cobweb.png" alt="">
+                    <img class="card-web" src="Assets/Images/Cobweb.png" alt="">
+                    <img class="card-web" src="Assets/Images/Cobweb.png" alt="">
+                    <img class="card-web" src="Assets/Images/Cobweb.png" alt="">
+                    <img class="card-spider" src="Assets/Images/Spider.png" alt="">
+                </div>
+            </div>
+            <div class="card impossible" data-name ='gift'>
+                <div class="card-face" >
+                    <img class="card-web" src="Assets/Images/CobwebGrey.png" alt="">
+                    <img class="card-web" src="Assets/Images/CobwebGrey.png" alt="">
+                    <img class="card-web" src="Assets/Images/CobwebGrey.png" alt="">
+                    <img class="card-web" src="Assets/Images/CobwebGrey.png" alt="">
+                    <img class="card-figure new-cards" src="Assets/Images/gift.png" alt="">
+                </div>
+                <div class="card-back">
+                    <img class="card-web" src="Assets/Images/Cobweb.png" alt="">
+                    <img class="card-web" src="Assets/Images/Cobweb.png" alt="">
+                    <img class="card-web" src="Assets/Images/Cobweb.png" alt="">
+                    <img class="card-web" src="Assets/Images/Cobweb.png" alt="">
+                    <img class="card-spider" src="Assets/Images/Spider.png" alt="">
+                </div>
+            </div>
+            <div class="card impossible" data-name ='Franken'>
+                <div class="card-face" >
+                    <img class="card-web" src="Assets/Images/CobwebGrey.png" alt="">
+                    <img class="card-web" src="Assets/Images/CobwebGrey.png" alt="">
+                    <img class="card-web" src="Assets/Images/CobwebGrey.png" alt="">
+                    <img class="card-web" src="Assets/Images/CobwebGrey.png" alt="">
+                    <img class="card-figure new-cards" src="Assets/Images/Franken.png" alt="">
+                </div>
+                <div class="card-back">
+                    <img class="card-web" src="Assets/Images/Cobweb.png" alt="">
+                    <img class="card-web" src="Assets/Images/Cobweb.png" alt="">
+                    <img class="card-web" src="Assets/Images/Cobweb.png" alt="">
+                    <img class="card-web" src="Assets/Images/Cobweb.png" alt="">
+                    <img class="card-spider" src="Assets/Images/Spider.png" alt="">
+                </div>
+            </div>
+            <div class="card impossible" data-name ='Franken'>
+                <div class="card-face" >
+                    <img class="card-web" src="Assets/Images/CobwebGrey.png" alt="">
+                    <img class="card-web" src="Assets/Images/CobwebGrey.png" alt="">
+                    <img class="card-web" src="Assets/Images/CobwebGrey.png" alt="">
+                    <img class="card-web" src="Assets/Images/CobwebGrey.png" alt="">
+                    <img class="card-figure new-cards" src="Assets/Images/Franken.png" alt="">
+                </div>
+                <div class="card-back">
+                    <img class="card-web" src="Assets/Images/Cobweb.png" alt="">
+                    <img class="card-web" src="Assets/Images/Cobweb.png" alt="">
+                    <img class="card-web" src="Assets/Images/Cobweb.png" alt="">
+                    <img class="card-web" src="Assets/Images/Cobweb.png" alt="">
+                    <img class="card-spider" src="Assets/Images/Spider.png" alt="">
+                </div>
+            </div>
+            <div class="card impossible" data-name ='candy'>
+                <div class="card-face" >
+                    <img class="card-web" src="Assets/Images/CobwebGrey.png" alt="">
+                    <img class="card-web" src="Assets/Images/CobwebGrey.png" alt="">
+                    <img class="card-web" src="Assets/Images/CobwebGrey.png" alt="">
+                    <img class="card-web" src="Assets/Images/CobwebGrey.png" alt="">
+                    <img class="card-figure new-cards" src="Assets/Images/candy.png" alt="">
+                </div>
+                <div class="card-back">
+                    <img class="card-web" src="Assets/Images/Cobweb.png" alt="">
+                    <img class="card-web" src="Assets/Images/Cobweb.png" alt="">
+                    <img class="card-web" src="Assets/Images/Cobweb.png" alt="">
+                    <img class="card-web" src="Assets/Images/Cobweb.png" alt="">
+                    <img class="card-spider" src="Assets/Images/Spider.png" alt="">
+                </div>
+            </div>
+            <div class="card impossible" data-name ='candy'>
+                <div class="card-face" >
+                    <img class="card-web" src="Assets/Images/CobwebGrey.png" alt="">
+                    <img class="card-web" src="Assets/Images/CobwebGrey.png" alt="">
+                    <img class="card-web" src="Assets/Images/CobwebGrey.png" alt="">
+                    <img class="card-web" src="Assets/Images/CobwebGrey.png" alt="">
+                    <img class="card-figure new-cards" src="Assets/Images/candy.png" alt="">
+                </div>
+                <div class="card-back">
+                    <img class="card-web" src="Assets/Images/Cobweb.png" alt="">
+                    <img class="card-web" src="Assets/Images/Cobweb.png" alt="">
+                    <img class="card-web" src="Assets/Images/Cobweb.png" alt="">
+                    <img class="card-web" src="Assets/Images/Cobweb.png" alt="">
+                    <img class="card-spider" src="Assets/Images/Spider.png" alt="">
+                </div>
+            </div>
+        </div>
+        <div id="start-game-screen" class="overlayer visible">
+            Click To Start
+            <input type="text" placeholder="Type your name">
+            <div class="button-container">
+                <button id ="Normal" class='coloration'>Normal</button>
+                <button id ="Hard">Hard </button>
+                <button id ="Impossible">Impossible </button>
+            </div>
+            <button class="start">Start the game </button>
+            <button class="get-score">score</button>
+        </div>
+        <div id="lost-game-screen"  class="overlayer ">
+            Game Over
+            <button class="start">Try Again</button>
+        </div>
+        <div id="won-game-screen"  class="overlayer">
+            YOU WON !
+            <span>Your Flips :<span class="score"></span></span>
+            <span>Your Time :<span class="time"></span></span>
+            <button class="start"><a style= 'text-decoration : none' href="javascript:window.location.href=window.location.href">New Game ?</a></button>
+            <!-- <button class="next-level">Next Level</button> -->
+        </div>
+        <div class="overlayer " id="scoringTable">
+            <table class="tablescore">
+                <thead>
+                    <tr>
+                        <th>Name</th>
+                        <th>Time <sub>(lower is better)</sub></th>
+                        <th>Number Of Flips <sub>(lower is better)</sub></th>
+                        <th>Level</th>
+                    </tr>
+                </thead>
+            </table>
+            <button class="get-back-to-game">Back to the game</button>
+            <button class="delete-all-score">Delete All scores</button>
+            <div class="message">
+                <img src="Assets/Images/—Pngtree—halloween ghost 3d element_5513226.png" alt="">
+            </div>
+        </div>
+    </main>  
+    <script src="script.js"></script>
+</body>
+</html>
